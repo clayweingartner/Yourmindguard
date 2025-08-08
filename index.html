@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MindGuard Haven — Ground • Guard • Grow</title>
+<meta name="description" content="One-stop mental health hub: crisis help, tools for anxiety, depression, PTSD, bipolar, schizoaffective, BPD, narcissistic abuse recovery, and more.">
+<style>
+  :root{
+    --bg1:#0b1220;--bg2:#0f172a;--card:#162036;--ink:#e5f2ff;--muted:#a9bdd6;
+    --accent:#34d399;--accent2:#38bdf8;--rose:#fb7185;--border:#334155
+  }
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--ink);line-height:1.55}
+  a{color:var(--accent2);text-decoration:none} a:hover{opacity:.9}
+  .wrap{max-width:1100px;margin:auto;padding:16px}
+  header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(1.2) blur(8px);background:#0e1628cc;border-bottom:1px solid var(--border)}
+  .nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .logo{width:36px;height:36px;border-radius:12px;background:rgba(52,211,153,.15);display:grid;place-items:center;color:var(--accent);font-weight:900}
+  .cta{background:rgba(251,113,133,.18);border:1px solid rgba(251,113,133,.3);color:#fecdd3;padding:8px 12px;border-radius:12px}
+  .grid{display:grid;gap:16px}
+  @media(min-width:900px){.grid-2{grid-template-columns:1.2fr .8fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+  h1,h2,h3{margin:0 0 8px 0} h1{font-size:36px;line-height:1.15} @media(min-width:900px){h1{font-size:48px}}
+  h2{font-size:24px;color:var(--accent)} h3{font-size:18px;color:var(--accent2)}
+  .muted{color:var(--muted);font-size:14px}
+  .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:#0f1a30;color:var(--ink)}
+  .btn.accent{background:rgba(52,211,153,.18);border-color:rgba(52,211,153,.35);color:#c7fce7}
+  .btn.sky{background:rgba(56,189,248,.18);border-color:rgba(56,189,248,.35);color:#d8f2ff}
+  .pill{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--border);font-size:12px;color:var(--muted)}
+  ul.clean{margin:8px 0 0 18px}
+  footer{border-top:1px solid var(--border);padding:18px;text-align:center;color:var(--muted);font-size:13px}
+  .kbd{font-family:ui-monospace,Menlo,monospace;background:#0b1426;padding:2px 6px;border:1px solid #1e293b;border-radius:6px}
+  /* breathing widget */
+  .breath{width:220px;height:220px;margin:auto;border-radius:50%;border:2px solid rgba(52,211,153,.5);display:grid;place-items:center;background:rgba(52,211,153,.15);transition:transform 0.8s ease}
+  .badge{font-size:11px;color:#a8ffda}
+  .downloads a{display:block}
+  .listcols{columns:2;column-gap:16px} @media(max-width:700px){.listcols{columns:1}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px">
+    <div class="brand">
+      <div class="logo">MG</div>
+      <div>
+        <div style="font-weight:700">MindGuard Haven</div>
+        <div class="muted">Ground • Guard • Grow</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#helpnow">Help now</a>
+      <a href="#calm">Quick calm</a>
+      <a href="#mindguard">MindGuard</a>
+      <a href="#conditions">Conditions</a>
+      <a href="#resources">Resources</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#about">About</a>
+      <a class="cta" href="#helpnow">I need help now</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" style="padding:20px 16px 40px">
+  <!-- HERO -->
+  <section class="grid grid-2" style="align-items:center">
+    <div>
+      <h1>A softer place to land when your mind is loud.</h1>
+      <p class="muted" style="margin:8px 0 16px">Immediate crisis support, practical tools, and straight-talk guidance for depression, anxiety, PTSD, bipolar, schizoaffective, BPD, substance battles, grief, and recovery from narcissistic abuse.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a href="#helpnow" class="btn accent">Help now</a>
+        <a href="#calm" class="btn sky">Try Quick Calm</a>
+        <button class="btn" id="shareBtn" type="button">Share</button>
+      </div>
+      <div class="muted" style="margin-top:8px">Disclaimer: Support & education only. Not medical or legal advice.</div>
+    </div>
+    <div class="card" style="text-align:center">
+      <div class="badge">4-7-8 Breathing (tap box)</div>
+      <div id="breath" class="breath">Start</div>
+      <div class="muted" style="margin-top:8px">Inhale 4 • Hold 7 • Exhale 8 &nbsp; ×4</div>
+    </div>
+  </section>
+
+  <!-- HELP NOW -->
+  <section id="helpnow" style="margin-top:24px">
+    <h2>Help now</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Call / Text 988 (U.S.)</h3>
+        <p class="muted">Suicide & Crisis Lifeline — 24/7, free, confidential.</p>
+        <a class="btn" href="tel:988">Call 988</a>
+      </div>
+      <div class="card">
+        <h3>Text HOME to 741741 (U.S.)</h3>
+        <p class="muted">Crisis Text Line — text with a trained counselor 24/7.</p>
+        <a class="btn" href="sms:+1741741">Open Messages</a>
+      </div>
+      <div class="card">
+        <h3>Emergency</h3>
+        <p class="muted">If you’re in immediate danger, call your local emergency number now.</p>
+        <a class="btn" href="tel:911">Call 911</a>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <strong>Outside the U.S.?</strong>
+      <p class="muted">Search “suicide crisis hotline + [your country]”. Many countries offer phone, text, and chat options.</p>
+    </div>
+  </section>
+
+  <!-- QUICK CALM -->
+  <section id="calm" style="margin-top:28px">
+    <h2>Quick calm (2 minutes)</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>4-7-8 Breathing</h3>
+        <p class="muted">Tap the green circle above to start/pause the guided timer.</p>
+      </div>
+      <div class="card">
+        <h3>5-4-3-2-1 Grounding</h3>
+        <ul class="clean">
+          <li>5 things you see</li><li>4 you feel</li><li>3 you hear</li><li>2 you smell</li><li>1 you taste</li>
+        </ul>
+        <p class="muted">Say them out loud. Let your eyes move slowly around the room.</p>
+      </div>
+      <div class="card">
+        <h3>Butterfly Tapping</h3>
+        <p class="muted">Cross arms over chest. Tap left/right slowly. Say: <em>“In this moment, I am safe.”</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MINDGUARD -->
+  <section id="mindguard" style="margin-top:28px">
+    <h2>MindGuard — boundary & abuse-recovery tools</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>DARVO Disarm</h3>
+        <ul class="clean">
+          <li><strong>Deny</strong> → “I hear you denying my experience.”</li>
+          <li><strong>Attack</strong> → “Name-calling isn’t okay.”</li>
+          <li><strong>Reverse</strong> → “I won’t accept the role reversal.”</li>
+        </ul>
+        <p class="muted"><span class="pill">Boundary</span> “We can continue if we stick to the topic and speak with respect. If not, I’m stepping away.”</p>
+      </div>
+      <div class="card">
+        <h3>Gaslight Detector</h3>
+        <ul class="clean">
+          <li>Write the <strong>exact words</strong> said.</li>
+          <li>List <strong>what you observed</strong> (dates, times, screenshots).</li>
+          <li>Note <strong>body signals</strong> (tight chest, heat, shaking).</li>
+        </ul>
+        <p class="muted"><span class="pill">Anchor</span> “I’m going with the documented facts. We’ll revisit when there’s accountability.”</p>
+      </div>
+      <div class="card">
+        <h3>Guilt-Trip Blocker</h3>
+        <p class="muted">“I care about you. I’m not available for that. If you want to talk calmly tomorrow at 3, I’m open.”</p>
+      </div>
+      <div class="card">
+        <h3>Safety Plan (3×3)</h3>
+        <p class="muted">List 3 people, 3 safe places, 3 coping skills. Screenshot it. Share with a trusted person.</p>
+        <div class="grid">
+          <input class="card" placeholder="People — name + number">
+          <input class="card" placeholder="People — name + number">
+          <input class="card" placeholder="People — name + number">
+          <input class="card" placeholder="Places — where you can go now">
+          <input class="card" placeholder="Places — where you can go now">
+          <input class="card" placeholder="Places — where you can go now">
+          <input class="card" placeholder="Coping — what helps you calm">
+          <input class="card" placeholder="Coping — what helps you calm">
+          <input class="card" placeholder="Coping — what helps you calm">
+        </div>
+        <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn" id="savePlan" type="button">Save to device</button>
+          <button class="btn" type="button" onclick="window.print()">Print</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONS -->
+  <section id="conditions" style="margin-top:28px">
+    <h2>Conditions — plain-language guides</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Depression</h3>
+        <ul class="clean"><li>Persistent low mood, loss of interest, fatigue</li><li>Try: movement, light, routine, social check-ins</li><li>Get help if: thoughts of self-harm, unable to function</li></ul>
+      </div>
+      <div class="card">
+        <h3>Anxiety Disorders</h3>
+        <ul class="clean"><li>GAD, Panic, Social Anxiety</li><li>Try: breathwork, exposure in small steps, caffeine limits</li><li>Get help if: panic attacks or avoidance take over</li></ul>
+      </div>
+      <div class="card">
+        <h3>PTSD</h3>
+        <ul class="clean"><li>Intrusive memories, hypervigilance, avoidance</li><li>Try: grounding, body-based calming, safe routines</li><li>Get help if: sleep, work, or safety are impacted</li></ul>
+      </div>
+      <div class="card">
+        <h3>Bipolar</h3>
+        <ul class="clean"><li>Mood episodes (depression / mania / hypomania)</li><li>Try: strict sleep routine, mood tracking, support</li><li>Get help if: decreased need for sleep + risky behavior</li></ul>
+      </div>
+      <div class="card">
+        <h3>Schizoaffective</h3>
+        <ul class="clean"><li>Mood symptoms + psychosis features</li><li>Try: structure, meds adherence, stress reduction</li><li>Get help if: safety concerns or reality testing is hard</li></ul>
+      </div>
+      <div class="card">
+        <h3>BPD</h3>
+        <ul class="clean"><li>Intense emotions, fear of abandonment, impulsivity</li><li>Try: DBT skills (distress tolerance, wise mind)</li><li>Get help if: self-harm urges, relationships feel unsafe</li></ul>
+      </div>
+      <div class="card">
+        <h3>Narcissistic Abuse</h3>
+        <ul class="clean"><li>Cycles of idealize–devalue–discard, gaslighting</li><li>Try: boundaries, documentation, grey-rock</li><li>Get help if: isolation, financial or physical risk</li></ul>
+      </div>
+      <div class="card">
+        <h3>Substance Battles</h3>
+        <ul class="clean"><li>Using to numb or cope</li><li>Try: urge surfing, replacement rituals, supports</li><li>Get help if: unsafe use, withdrawal, legal/work impact</li></ul>
+      </div>
+      <div class="card">
+        <h3>Grief & Loss</h3>
+        <ul class="clean"><li>Waves of sadness, anger, numbness</li><li>Try: permission to feel, memorial rituals, connection</li><li>Get help if: prolonged impairment or suicidality</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources" style="margin-top:28px">
+    <h2>Resource library</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Therapy directories</h3>
+        <div class="listcols">
+          <a href="https://www.psychologytoday.com/us/therapists" target="_blank">Psychology Today (US/Intl)</a>
+          <a href="https://openpathcollective.org/" target="_blank">Open Path Collective (low-cost)</a>
+          <a href="https://www.inclusivetherapists.com/" target="_blank">Inclusive Therapists</a>
+          <a href="https://www.betterhelp.com/" target="_blank">BetterHelp (online)</a>
+          <a href="https://www.talkspace.com/" target="_blank">Talkspace (online)</a>
+        </div>
+        <p class="muted" style="margin-top:8px">Tip: filter for trauma-informed, sliding scale, or telehealth.</p>
+      </div>
+      <div class="card">
+        <h3>Crisis & support</h3>
+        <div class="listcols">
+          <a href="https://988lifeline.org/" target="_blank">988 Lifeline (US)</a>
+          <a href="https://www.crisistextline.org/" target="_blank">Crisis Text Line (US/Intl)</a>
+          <a href="https://www.samaritans.org/" target="_blank">Samaritans (UK/IE)</a>
+          <a href="https://www.lifeline.org.au/" target="_blank">Lifeline (AU)</a>
+          <a href="https://www.talksuicide.ca/" target="_blank">Talk Suicide (CA)</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Apps & tools</h3>
+        <div class="listcols">
+          <span>Mood tracking (Daylio, Bearable)</span>
+          <span>Meditation (Insight Timer)</span>
+          <span>Journaling (Stoic, Journey)</span>
+          <span>Sleep (CBT-i Coach)</span>
+          <span>Habit building (Loop)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOADS -->
+  <section id="downloads" style="margin-top:28px">
+    <h2>Downloads (save offline)</h2>
+    <div class="grid grid-3 downloads">
+      <div class="card">
+        <h3>Safety Plan (fillable)</h3>
+        <a href="#" onclick="downloadText('safety-plan.txt', buildSafetyPlan()); return false;">Download .txt</a>
+      </div>
+      <div class="card">
+        <h3>Crisis Calm Checklist</h3>
+        <a href="#" onclick="downloadText('crisis-calm-checklist.txt', crisisChecklist()); return false;">Download .txt</a>
+      </div>
+      <div class="card">
+        <h3>Daily Coping Strategies</h3>
+        <a href="#" onclick="downloadText('daily-coping.txt', dailyCoping()); return false;">Download .txt</a>
+      </div>
+    </div>
+    <p class="muted" style="margin-top:8px">PDFs coming later — these plain text files work on any phone.</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" style="margin-top:28px">
+    <h2>About this space</h2>
+    <div class="card">
+      <p>I created MindGuard Haven to be a safe, calming place for anyone navigating depression, anxiety, PTSD, bipolar disorder, schizoaffective disorder, borderline personality disorder, substance battles, grief, or recovery from narcissistic abuse.</p>
+      <p>This space is for you, and for me, because healing isn’t something we do alone — it’s something we build together.</p>
+      <p>— Clay</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="yr"></span> MindGuard Haven • Support & Education Only — Not Medical Advice
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // share
+  const shareBtn = document.getElementById('shareBtn');
+  if (shareBtn && navigator.share) {
+    shareBtn.addEventListener('click', () => {
+      navigator.share({title:'MindGuard Haven', text:'Ground • Guard • Grow — tools that help in the moment.', url: location.href});
+    });
+  } else if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+      await navigator.clipboard.writeText(location.href);
+      alert('Link copied');
+    });
+  }
+
+  // breathing widget
+  const breath = document.getElementById('breath');
+  let run=false, phase='inhale', count=4, timer;
+  function tick(){
+    count--;
+    if(count<=0){
+      if(phase==='inhale'){ phase='hold'; count=7; breath.style.transform='scale(1.0)'; }
+      else if(phase==='hold'){ phase='exhale'; count=8; breath.style.transform='scale(0.9)'; }
+      else { phase='inhale'; count=4; breath.style.transform='scale(1.1)'; }
+    }
+    breath.textContent = count;
+  }
+  breath.addEventListener('click', ()=>{
+    if(!run){ run=true; phase='inhale'; count=4; breath.style.transform='scale(1.1)'; breath.textContent=count; timer=setInterval(tick,1000);}
+    else { run=false; clearInterval(timer); breath.textContent='Start'; breath.style.transform='scale(1)'; }
+  });
+
+  // safety plan save/load
+  const saveBtn = document.getElementById('savePlan');
+  function qsAll(pl){ return Array.from(document.querySelectorAll(pl)); }
+  function planValues(){
+    const inputs = Array.from(document.querySelectorAll('#mindguard input'));
+    const [people,places,coping] = [inputs.slice(0,3),inputs.slice(3,6),inputs.slice(6,9)];
+    return {people:people.map(i=>i.value),places:places.map(i=>i.value),coping:coping.map(i=>i.value)};
+  }
+  function buildSafetyPlan(){
+    const p = planValues();
+    return `MindGuard Safety Plan
+People:
+- ${p.people.join('\n- ')}
+
+Places:
+- ${p.places.join('\n- ')}
+
+Coping skills:
+- ${p.coping.join('\n- ')}
+
+Saved: ${new Date().toLocaleString()}
+`;
+  }
+  function crisisChecklist(){
+    return `Crisis Calm Checklist
+1) Breathe 4-7-8, 4 cycles
+2) 5-4-3-2-1 grounding
+3) Butterfly tapping 60–120s
+4) Drink water • step outside if safe
+5) Text HOME to 741741 or call 988 (US)
+6) Review Safety Plan (people, places, coping)
+`;
+  }
+  function dailyCoping(){
+    return `Daily Coping Strategies
+• Light movement / walk 10–20 min
+• Hydration + regular meals
+• 10 min tidy/reset your space
+• Reach out to 1 safe person
+• Limit caffeine if anxious
+• Bedtime wind-down, screens off 30–60 min
+`;
+  }
+  function downloadText(filename, text){
+    const blob = new Blob([text], {type:'text/plain'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href=url; a.download=filename; a.click();
+    URL.revokeObjectURL(url);
+  }
+  if(saveBtn){
+    saveBtn.addEventListener('click', ()=>{
+      localStorage.setItem('mindguard_safety_plan', JSON.stringify(planValues()));
+      alert('Saved to this device. Use Downloads to export text version.');
+    });
+  }
+</script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
